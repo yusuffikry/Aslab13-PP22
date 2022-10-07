@@ -1,9 +1,10 @@
-x = int(input("x : "))
-y = int(input("y : "))
+n = int(input('Bilangan : '))
 
-if x < y:
-    for i in range(1, y+1):
-        print(i, end="\n" if i % x == 0 else " ")
-
-else:
-    print("error")
+def factorial(n):
+    if n < 0:
+        print("tidak terdefinisi")
+    elif n > 1:
+        return n*factorial(n-1)
+    else:
+        return 1
+print(factorial(n))
